@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  server:
+    image: node:12.18.1-alpine
+    ports:
+    - 3000:3000
+    volumes:
+    - ./server:/server
+    working_dir: /server
+    command: ash -c "yarn && yarn start"
